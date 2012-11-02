@@ -37,7 +37,7 @@ describe Fracciones do
 	end
 	
 	it "Se debe comparar si dos fracciones son iguales con ==" do
-		(@fracc_obj1 == @fracc_obj2).should == true
+		(@fracc_obj1 == @fracc_obj2).should = true
 	end
 
 end

@@ -54,7 +54,7 @@ class Fracciones
 			respuesta = false
 		end
 		
-		return respuesta
+		return respuesta.to_b
 		  
 	end
 	
