@@ -1,0 +1,39 @@
+require 'fracciones'
+
+describe Fracciones do
+
+	before :each do
+		@fracc_obj1 = Fracciones.new(1, 2)
+		@fracc_obj2 = Fracciones.new(2, 4) 
+	end
+
+	it "Debe existir un numerador" do
+		@fracc_obj1.num.should == 1
+	end
+
+	it "Debe existir un denominador" do
+		@fracc_obj1.den.should == 2
+	end
+
+	it "Debe estar en su forma reducida" do
+		@fracc_obj2.num.should == 1
+		@fracc_obj2.den.should == 2
+	end
+
+	it "Se debe invocar al metodo num() para obtener el numerador" do
+		@fracc_obj1.num().should == 1
+	end
+
+	it "Se debe invocar al metodo denom() para obtener el denominador" do
+		@fracc_obj1.denom().should == 2
+	end
+
+	it "Se debe mostrar por la consola la fraccion de la forma: a/b, donde a es el numerador y b el denominador" do
+		@fracc_obj1.to_s.should == "1/2"
+	end
+
+	it "Se debe mostar por la consola la fraccion en formato flotante" do
+		@fracc_obj1.flotante().should == 0.5
+	end
+
+end
